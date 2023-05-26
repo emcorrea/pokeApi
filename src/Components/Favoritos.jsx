@@ -27,11 +27,11 @@ function Favoritos () {
 					<tbody>
 						{
 							context.pokemonesFavoritos?.map(valor => (
-								<tr>
+								<tr key={valor.id}>
 									<td className="text-center">{valor.id}</td>
 									<td className="text-center"><img src={valor.imagen} alt={valor.nombre} /></td>
 									<td className="text-center">{valor.nombre}</td>
-									<td className="text-center"><span class="badge text-bg-info">{valor.habilidad}%</span></td>
+									<td className="text-center"><span className="badge text-bg-info">{valor.habilidad}%</span></td>
 									<td className="text-center">
 										<button className="btn btn-sm btn-danger" onClick={() => eliminarFavorito(valor.id)}>
 											Eliminar
